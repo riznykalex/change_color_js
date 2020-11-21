@@ -5,6 +5,7 @@ let video;
 let videoBg;
 let canPlay;
 let applyEffect;
+let rangeEffect;
 
 function init() {
     startButton = document.getElementById('StartButton');
@@ -13,6 +14,9 @@ function init() {
     context = canvas.getContext('2d');
     video = document.getElementById('SourceVideo');
     videoBg = document.getElementById('bgVid');
+
+
+
 
     video.muted = true;
 
@@ -67,11 +71,14 @@ function drawFrame(video) {
 
 
 function invertColors(data) {
+    rangeEffect = document.getElementById('effect').value;
+    document.getElementById('effectVal').textContent = rangeEffect;
+
     for (let i = 0; i < data.length; i += 4) {
         var avg = (data[i] + data[i + 1] + data[i + 2])/3
         //if (data[i] <= 120  && data[i + 1] > 150 && data[i + 2] < 120) {
         //if (data[i + 1] > 120 && data[i] + data[i + 2] < data[i + 1] +70 ) {
-        if (data[i+1]  - avg > 36) {
+        if (data[i+1]  - avg > rangeEffect) {
             data[i + 3] = 0 ;
         }
     }
