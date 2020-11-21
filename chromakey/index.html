@@ -3,16 +3,36 @@
   <head>
     <meta charset="utf-8">
     <title>Change Background</title>
-    
+    <link rel="stylesheet" href="style.css">
+    <script src="change.js"></script>
+
   </head>
   <body>
 
-    <div>
-        <video id="video" src="unicorn.mp4" controls></video>
-    </div>    
-    <canvas id="c1" width="1280" height="720"></canvas>
-    <canvas id="c2" width="1280" height="720"></canvas>
-    <script src="change.js"></script>
+  <div class="container">
+    <div class="column">
+      <video id="SourceVideo" src="frog.mp4"  controls crossorigin="Anonymous"></video>
+      <button id="StartButton">Start</button>
+      <button id="ToggleButton">Toggle Effect</button>
+    </div>
+
+
+
+
+    <div class="wrapper">
+      <div class="bgvideo">
+        <video id="bgVid" src="Beach.mp4" controls crossorigin="Anonymous"></video>
+      </div>
+      <div>
+        <div class="video-container">
+          <canvas id="Canvas" ></canvas>
+        </div>
+
+
+
+    </div>
+  </div>
+
 
   </body>
 </html>
