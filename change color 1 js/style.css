@@ -1,26 +1,21 @@
-*{
-margin: 0;
-padding: 0;
+.container {
+  display: flex;
+  width: 400px;
 
+.column {
+  max-width: 100%;
+  flex: 0 0 400px;
 }
-body{
-  overflow: hidden;
+
+img, canvas {
+  max-width: 100%;
 }
-input[type='color']{
-  position: absolute;
-  ;
-  top: 20px;
-  left: 20px;
-  z-index: 2;
+
+canvas {
+  border: 1px solid #ccc;
 }
-img{
-  width: 100%;
-  height: 100vh;
 }
-.bg{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  mix-blend-mode: hue;
+
+.video-container {
+  width: 400px;
 }

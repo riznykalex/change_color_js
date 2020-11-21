@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Change Background</title>
+    <link rel="stylesheet" href="style-new.css">
+
+  </head>
+  <body>
+
+    <input type="color" id="color" value="#ff0000">
+    <img src="test.jpg" alt="" class="img">
+    <div class="bg">test</div>
+
+
+
+    <script type="text/javascript">
+      const color =document.getElementById('color');
+      const bg = document.querySelector('.bg');
+      const image = document.querySelector(".img");
+
+
+
+      color.addEventListener('input', () =>  {
+
+        //bg.style.height = image.height + "px";
+        //bg.style.width = image.width + "px";
+
+        let colValue = color.value;
+        console.log(colValue);
+        bg.style.backgroundColor = colValue;
+      });
+    </script>
+
+  </body>
+</html>
